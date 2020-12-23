@@ -10,8 +10,8 @@ app.use(morgan("combine"));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.send("root");
+app.post("/register", (req, res) => {
+  res.send(`User ${req.body.username} registered successfully.`);
 });
 
 app.listen(PORT, () => {
